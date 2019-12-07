@@ -1,0 +1,68 @@
+extends ../../layouts/common.pug
+
+block title
+    title Misabee Shop
+
+block content
+    div#carouselExampleIndicators.carousel.slide(data-ride='carousel')
+        ol.carousel-indicators
+            li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+            li(data-target='#carouselExampleIndicators', data-slide-to='1')
+            li(data-target='#carouselExampleIndicators', data-slide-to='2')
+        .carousel-inner
+            .carousel-item.active
+                img.d-block(src='/images/slide/LV.jpg', alt='LV')
+            .carousel-item
+                img.d-block(src='/images/slide/GC.jpg', alt='GUCCI slide')
+            .carousel-item
+                img.d-block(src='/images/slide/HM.jpg', alt='HM')
+        a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.sr-only Previous
+        a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.sr-only Next
+
+    div.container.div-infor
+        div.row
+            div.col.infor(style="text-align: center")
+                div.content-infor
+                    h1.title-infor Misabee Shop
+                    p Misabee shop - Túi xách thời trang cao cấp Hà Nội, nội thành Hà Nội nhận hàng ngay trong ngày. Đặt hàng ngay hôm nay để nhận được nhiều ưu đãi!
+        div
+            hr.share
+
+    div.container.products
+        div.row
+            div.col.col-12
+                h1 Sản phẩm
+        div.row(id='products')
+            
+        div.row(id="load-more-div")
+
+        div
+            hr.share
+
+    div.container.banner
+        div.row.banner-row
+            div.col-lg-3.col-md-6.col-sm-6.col-12.banner-card
+                div
+                    img(src="/images/topbar/shipp.png", alt="shipp.png")
+                div.title GIAO HÀNG
+                div.content Nhận hàng trong ngày tại Hà Nội
+            div.col-lg-3.col-md-6.col-sm-6.col-12.banner-card
+                div
+                    img(src="/images/topbar/days.png", alt="shipp.png")
+                div.title 7 NGÀY
+                div.content Sản phẩm được giao trong vòng 7 ngày
+            div.col-lg-3.col-md-6.col-sm-6.col-12.banner-card
+                div
+                    img(src="/images/topbar/cash.png", alt="shipp.png")
+                div.title THANH TOÁN
+                div.content Hình thức thanh toán thuận tiện nhất
+            div.col-lg-3.col-md-6.col-sm-6.col-12.banner-card
+                div
+                    img(src="/images/topbar/phone.png", alt="shipp.png")
+                div.title LIÊN HỆ: 
+                    a.phone(href='tel:0849666389') 0849666389
+                div.content Mọi chi tiết xin liên hệ vào đường dây trên

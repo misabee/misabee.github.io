@@ -1,0 +1,377 @@
+/*------------------- /layouts/common----------------*/
+
+button:active,
+button:focus { 
+    -moz-outline-style: none; 
+}
+
+.scrollUp {
+    transform: translateY(-80px);
+}
+
+nav.navbar {
+    background: rgb(228, 228, 228)!important;
+    z-index: 9998;
+    transition: all 0.5s;
+}
+
+main {
+    background-color: rgba(231, 230, 230, 0.315);
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+@media screen and (max-width: 991px) {
+    .dropdown-menu {
+        background-color: rgba(231, 230, 230, 0.315)!important;
+        border: none;
+    }
+}
+
+.dropdown-item:hover {
+    background-color: rgb(228, 228, 228)!important;
+    border: none;
+}
+
+@media screen and (min-width: 992px) {
+    .dropmenu2 .dropdown-menu {
+        background-color: white;
+        border: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        left: -2.8rem;
+    }
+}
+
+.logo {
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.search {
+    border: none!important;
+    border-radius: 10px!important;
+    background: #f6f5f3!important;
+}
+
+div.search {
+    width: auto!important;
+}
+
+.search::content {
+    border: none;
+}
+
+.search:hover {
+   color: #6c757d!important; 
+   border: none;
+}
+
+@media screen and (min-width: 992px) {
+    .cart-collapsed {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 991px) {
+    .cart-collapsed {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .cart-collapsed a {
+        width: fit-content;
+        padding-left: 0;
+        padding-right: 6;
+    }
+    
+    .cart-collapsed i {
+        font-size: 2rem;
+        color: #6c757d;
+    }
+
+    .search-collapsed::after {
+        display: none;
+    }
+
+    span.dropdown {
+        padding-top: 8px;
+    }
+
+    .search-collapsed-dropdown {
+        min-width: 18rem;
+        left: -155px;
+        background-color: rgba(0, 0, 0, 0)!important;
+    }
+}
+    
+.under-navbar {
+    height: 4.7rem;
+}
+
+
+@media screen and (min-width: 992px) {
+    .cart {
+        display: block;
+    }
+
+    .cart i {
+        font-size: 2rem;
+        color: #6c757d;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .cart {
+        display: none;
+    }
+
+    .need-hide {
+        display: none;
+    }
+}
+
+footer {
+    max-width: 100%!important;
+    margin: 0!important;
+    padding: 0!important;
+    background-color: 1b334b;
+    font-weight: bold;
+    color: white;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+footer .row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer .col-6 {
+    padding: 0;
+}
+
+.left {
+    text-align: start;
+    padding-left: 5px;
+}
+
+.right {
+    text-align: end;
+    padding-right: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .shopee:hover img {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+    }
+
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(1px, 1px) rotate(-1deg); }
+    20% { transform: translate(1px, 1px) rotate(0deg); }
+    30% { transform: translate(3px, 2px) rotate(1deg); }
+    40% { transform: translate(1px, 1px) rotate(0deg); }
+    50% { transform: translate(1px, 1px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(1px, 1px) rotate(1deg); }
+    80% { transform: translate(1px, 1px) rotate(0deg); }
+    90% { transform: translate(1px, 2px) rotate(-1deg); }
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+}
+
+.end-page {
+    background: rgba(228, 228, 228, 0.575)!important;
+    margin: 0;
+    max-width: 100%;
+}
+
+.end-page i {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.end-page .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.end-page .phone {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+@media screen and (min-width: 768px) {
+    .contact:hover .phone i {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+    }
+}
+
+.end-page .shopee {
+    width: 42px;
+}
+
+.end-page .facebook {
+    width: 35px;
+    margin-right: 20px;
+}
+
+.end-page .icon-follow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-left: 0;
+}
+
+.end-page .end-page-item {
+    padding: 30px;
+}
+
+@media screen and (max-width: 575px) {
+    .end-page .hr-share {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .end-page .hr-share {
+        display: none;
+    }
+}
+
+/*------------------- /view/home/index ---------------*/
+
+@media screen and (max-width: 991px) {
+    .carousel img {
+        width: 100%!important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .carousel {
+        width: 90%;
+    }
+
+    .carousel img {
+        width: 100%;
+    }
+    .carousel {
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .carousel {
+        width: 60%;
+    }
+
+    .carousel img {
+        width: 100%;
+    }
+    .carousel {
+        margin: auto;
+    }
+}
+
+.banner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.banner-card {
+    height: 130px;
+    text-align: center;
+}
+
+.banner .title {
+    font-weight: bold;
+    margin-bottom: 2px;
+    margin-top: 7px;
+}
+
+.banner .content {
+    font-size: 12px;
+}
+
+.phone {
+    text-decoration: none;
+    color: #212529;
+}
+
+.phone:hover {
+    text-decoration: none;
+    color: #212529;
+}
+
+@media screen and (min-width: 768px) {
+    .banner-card:hover img {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+    }
+}
+
+
+.infor {
+    text-align: center;
+    padding: 30px 0 25px 0;
+}
+
+.div-infor {
+    justify-content: center;
+}
+
+h1.title-infor {
+    padding-bottom: 10px!important;
+    margin-top: 20px!important;
+}
+
+
+@media screen and (max-width: 767px) {
+    .content-infor {
+        width: 80%;
+        margin: auto;
+    }
+
+    .share {
+        border-top: 1px solid #6c757d59;
+    }
+}
+
+.products h1 {
+    text-align: center;
+    padding: 30px ;
+}
+
+#load-more-div {
+    height: 55px;
+    align-items: center;
+}
+
+.products .load-more {
+    text-align: center;
+}
+
+/*------------------- /views/error/err404-------------*/
+
+.p404 {
+    text-align: center!important;
+}
+
+.p404-i {
+    margin-bottom: 20px;
+}
+
+.jumbotron {
+    width: 90%;
+    margin: auto;
+}

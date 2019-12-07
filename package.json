@@ -1,0 +1,21 @@
+{
+  "name": "misa-bee",
+  "version": "1.0.0",
+  "description": "E-commercial website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thành Vũ",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "md5": "^2.2.1",
+    "mongodb": "^3.3.5",
+    "pug": "^2.0.4"
+  }
+}

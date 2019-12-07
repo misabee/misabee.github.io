@@ -1,0 +1,66 @@
+extends ../../layouts/common.pug
+
+block title
+    title Misabee Shop
+
+block css
+    link(rel='stylesheet', href='/styles/view-product-style.css')
+
+block content
+    div.container.c1
+        div.row(style="justify-content: center;")
+            div.col.col-lg-5.col-md-6.col-sm-12.col-12.image-carousel-div
+                div(id="card" class="carousel slide" data-ride="carousel")
+                    ol.carousel-indicators
+                        li.active(data-target='#card', data-slide-to='0')
+                        li(data-target='#card', data-slide-to='1')
+                        li(data-target='#card', data-slide-to='2')
+                        li(data-target='#card', data-slide-to='3')
+                        li(data-target='#card', data-slide-to='4')
+                    .carousel-inner
+                        .carousel-item.active
+                            img.d-block(src=product.image_brand, alt='LV')
+                        .carousel-item
+                            img.d-block(src=product.image_1, alt='GUCCI slide')
+                        .carousel-item
+                            img.d-block(src=product.image_2, alt='HM')
+                        .carousel-item
+                            img.d-block(src=product.image_3, alt='HM')
+                        .carousel-item
+                            img.d-block(src=product.image_4, alt='HM')
+                    a.carousel-control-prev(href='#card', role='button', data-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.sr-only Previous
+                    a.carousel-control-next(href='#card', role='button', data-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.sr-only Next
+            div.col.col-lg-5.col-md-6.col-sm-12.col-12
+                div.title-div    
+                    h2.title=product.name
+                div.price-div
+                    h5.price=product.price + ' ₫'
+                div.warranty-div
+                    p= 'Bảo hành: ' + product.warranty + ' tháng'
+                div.add-to-cart-div
+                    button.btn-block(type="button" class="btn btn-danger" id="addToCard")
+                        i(class="material-icons") add_shopping_cart
+                        div
+                            span(id="onAddToCart") Thêm vào giỏ hàng
+                div.more
+                    ul
+                        li Giao hàng nhanh toàn quốc
+                        li Nhận hàng trong ngày tại nội thành Hà Nội
+                        li Liên hệ đặt hàng nhanh: &nbsp;
+                            span
+                                a(href='tel:0849666389') 0849666389
+        div.hr1
+            hr.share
+
+        div.row(style="justify-content: center;")
+            div.col.col-lg-10.col-md-12.col-sm-12.col-12
+                h2 Chi tiết sản phẩm
+                p= product.description
+block js
+    script(type="text/javascript", src="/js/view-product/custom.js")
+    script(type="text/javascript", src="/js/view-product/ajax.js")
+                

@@ -1,0 +1,54 @@
+.carousel-indicators li {
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50%;
+}
+
+.price {
+    color: #e10c00;
+}
+
+#card {
+    width: 100%;
+}
+
+.c1 {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.hr1 {
+    padding-top: 33px;
+}
+
+.title-div {
+    height: 85px
+}
+
+.warranty-div {
+    height: 55px;
+}
+
+@media screen and (max-width: 767px) {
+    .title-div {
+        margin-top: 30px;
+    }
+
+    .hr1 {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .image-carousel-div {
+        padding: 0 0 0 0;
+    }
+
+    .c1 {
+        padding-top: 0px;
+    }   
+}
+
+.more {
+    padding-top: 30px;
+}

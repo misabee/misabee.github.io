@@ -1,0 +1,108 @@
+html
+    head
+        block title
+        meta(property="og:title" content="Misabee Shop")
+        meta(property="og:description" content="Demo Node.js server application")
+        meta(property="og:image" content="https://res.cloudinary.com/dumfvnj9f/image/upload/v1575527753/misa-bee/circle-cropped_qmnuyt.png")
+        meta(property="og:url" content="")
+        meta(property="og:type", content="website")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="icon" href="https://res.cloudinary.com/dumfvnj9f/image/upload/v1575527753/misa-bee/circle-cropped_qmnuyt.png")
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin='anonymous')
+        link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet")
+        script(src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")
+        script(src="https://kit.fontawesome.com/772ef66bac.js" crossorigin="anonymous")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM', crossorigin='anonymous')
+        link(rel='stylesheet', href='/styles/custom.css')
+        link(rel='stylesheet', href='/styles/product-cart-style.css')
+        block css
+    body
+        nav(class="navbar navbar-expand-lg navbar-light bg-light fixed-top")
+            div(class="pl-0")
+                a(class="navbar-brand" href="/")
+                    img.logo(src="/images/logo-1.png" alt="logo.png" style="height: 50px")
+                    span(class="name-page") Misabee
+            div.cart-collapsed
+                span.dropdown
+                    a.search-collapsed(class="dropdown-toggle" href="" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                        i(class="material-icons-outlined") search
+                    div.search-collapsed-dropdown(class="dropdown-menu" aria-labelledby="searchDropdown")
+                        div.search(class="input-group my-2 my-lg-0")
+                            input.search(type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon2")
+                            div(class="input-group-append")
+                                button.search(class="btn btn-outline-secondary" type="button")
+                                    i(class="material-icons-outlined") search
+                        
+                a(class="nav-link" href="/cart")
+                    i(class="material-icons-outlined") shopping_cart
+            button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                span(span class="navbar-toggler-icon")
+            div.dropmenu-2(class="collapse navbar-collapse" id="navbarSupportedContent")
+                ul.function-nav(class="navbar-nav mr-auto")
+                    li(class="nav-item")
+                        a(class="nav-link" href="/") Trang chủ
+                        span(class="sr-only")
+                    li.ele-dropdown(class="nav-item dropdown")
+                        a.ele-dropdown(class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")="Sản phẩm "
+                        div.ele-dropdown(class="dropdown-menu" aria-labelledby="navbarDropdown")
+                            a(class="dropdown-item" href="/products/louis-vuitton") Louis Vuitton
+                            a(class="dropdown-item" href="/products/hermes") Hermes
+                            a(class="dropdown-item" href="/products/gucci") Gucci
+                    li.ele-dropdown(class="nav-item dropdown")
+                        a.ele-dropdown(class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")="Hỗ trợ "
+                        div.ele-dropdown(class="dropdown-menu" aria-labelledby="navbarDropdown")
+                            a(class="dropdown-item" href="/support/shipping") Giao nhận
+                            a(class="dropdown-item" href="/support/billing") Thanh toán
+                            a(class="dropdown-item" href="/support/warranty ") Bảo hành
+                    li(class="nav-item")
+                        a(class="nav-link" href="/contact") Liên hệ
+                        span(class="sr-only")
+                div.search.need-hide(class="input-group my-2 my-lg-0")
+                    input.search(type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon2")
+                    div(class="input-group-append")
+                        button.input-group-append.search(class="btn btn-outline-secondary" type="button")
+                            i(class="material-icons-outlined") search
+                div.cart
+                    a(class="nav-link" href="/cart")
+                        i(class="material-icons-outlined") shopping_cart
+        div.under-navbar
+        main
+            block content        
+        div.end-page.container
+            div.row
+                div.col-lg-6.col-md-6.col-sm-6.col-12.end-page-item
+                    div.contact
+                        h2 Liên hệ
+                        div
+                            br/
+                        p Gọi điện mua hàng, khiếu nại
+                        div.phone
+                            i(class="fas fa-phone-alt")
+                            span
+                                a.phone(href='tel:0849666389')="0849666389"
+                div.col-12.hr-share
+                    hr.share
+                div.col-lg-6.col-md-6.col-sm-6.col-12.end-page-item
+                    h2.follow-title Theo dõi Misabee
+                    div
+                        br/
+                    div.icon-follow.container
+                        span
+                            a(href="https://www.facebook.com/Misabee-Shop-108408477285743/" target="blank")
+                                img.facebook(src="/images/icons/facebook.png")
+                        span.facebook-span
+                            a(href="https://shopee.vn/toilaxoan" target="blank")
+                                img.shopee(src="/images/icons/shopee.png")
+
+        footer.page-footer.font-small.container
+            div.row
+                div.col-6
+                    div.left © 2019 Misabee Shop
+                div.col-6
+                    div.right Power by Misa
+        script(type="text/javascript", src="/js/custom.js")
+        script(type="text/javascript", src="/js/ajax.js")
+        block js
