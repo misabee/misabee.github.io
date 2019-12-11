@@ -13,7 +13,7 @@ var page = 2;
                                 '<a class="img-link", href="/products/' + data[i]._id + '">' + '<img class="card-img" src="' + data[i].image_brand + '" alt="Card image">' + '</a>' + 
                                 '<div class="card-body">' + 
                                     '<a href="/products/' + data[i]._id + '">' + '<h4 class="card-title">' + data[i].name + '</h4>' + '</a>' +
-                                    '<h5 class="price">' + data[i].price + '<span>&nbsp;₫</span></h5>' + 
+                                    '<h5 class="price">' + data[i].price + '<span>.000₫</span></h5>' + 
                                 '<div/>' + 
                             '</div>' + 
                         '</div>'

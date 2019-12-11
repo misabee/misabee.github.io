@@ -1,0 +1,22 @@
+extends ../../layouts/common.pug
+
+block title
+    title Quản lý
+
+block content
+    div(style="height: 30px")
+    div.jumbotron
+        h1.p404= 'Xin chào  ' + user.name
+        div.p404
+            span
+                a.btn.btn-danger.shadow-none(style="margin: 10px 10px;" href="/users/orders/unchecked") Đơn hàng chưa kiểm tra
+            span
+                a.btn.btn-danger.shadow-none(style="margin: 10px 10px;" href="/users/orders") Tất cả đơn hàng
+        div.p404
+            span
+                a.btn.btn-danger.shadow-none(style="margin: 10px 10px;" href="/users/all") Tất cả quản trị viên
+            span
+                a.btn.btn-danger.shadow-none(style="margin: 10px 10px;" href="/auth/create") Tạo tài khoản quản trị
+        
+            
+    div(style="height: 30px")

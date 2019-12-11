@@ -18,3 +18,24 @@ module.exports.viewProduct = function(req, res) {
         }
     });
 }
+
+module.exports.search = function (req, res) {
+    var productsCollection;
+    db(db => {
+        productsCollection = db.collection('products');
+    });
+    productsCollection.find({}).toArray((err, result) => {
+        if (err)
+            console.log(err);
+        else {
+            var name = req.query.name;
+            var matchedProducts = result.filter(function (product) {
+                return product.name.toLowerCase().search(name.toLowerCase()) != -1;
+            });
+            res.render('products/search.pug', {
+                products: matchedProducts.reverse(),
+                name: name
+            });
+        }
+    });
+}

@@ -1,0 +1,29 @@
+extends ../../layouts/common.pug
+
+block title
+    title Đặt hàng
+
+block css
+    link(rel='stylesheet', href='/styles/cart-submit-style.css')
+
+block content
+    div(id="order-add")
+    div.container.cart-submit-page(id="order")
+        div.row
+            div.col
+                h1.title Đặt hàng
+                div(id="order-content")
+                    form(id="order-form")
+                        div.form-group
+                            label(for="name") Tên
+                            input#name.form-control.shadow-none(type="text" placeholder="Tên" name="name")
+                        div.form-group
+                            label(for="address") Địa chỉ
+                            input#address.form-control.shadow-none(type="text" placeholder="Địa chỉ" name="address")
+                        div.form-group
+                            label(for="phone") Số điện thoại
+                            input#phone.form-control.shadow-none(type="text" placeholder="Số điện thoại" name="phone")
+                        
+                        button.btn.btn-danger.shadow-none(type="submit" id="send") Đặt hàng
+block js
+    script(src="/js/cart/submit.js")

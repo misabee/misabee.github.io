@@ -1,7 +1,7 @@
 extends ../../layouts/common.pug
 
 block title
-    title Misabee Shop
+    title= product.name
 
 block css
     link(rel='stylesheet', href='/styles/view-product-style.css')
@@ -38,11 +38,11 @@ block content
                 div.title-div    
                     h2.title=product.name
                 div.price-div
-                    h5.price=product.price + ' ₫'
+                    h5.price=product.price + '.000₫'
                 div.warranty-div
                     p= 'Bảo hành: ' + product.warranty + ' tháng'
                 div.add-to-cart-div
-                    button.btn-block(type="button" class="btn btn-danger" id="addToCard")
+                    button.btn-block(type="button" class="btn btn-danger shadow-none" id="addToCard")
                         i(class="material-icons") add_shopping_cart
                         div
                             span(id="onAddToCart") Thêm vào giỏ hàng
@@ -58,9 +58,10 @@ block content
 
         div.row(style="justify-content: center;")
             div.col.col-lg-10.col-md-12.col-sm-12.col-12
-                h2 Chi tiết sản phẩm
+                h2(style="padding-bottom: 15px;") Chi tiết sản phẩm
                 p= product.description
+        div(style="display: none;" id="id")= product._id
+        
 block js
     script(type="text/javascript", src="/js/view-product/custom.js")
-    script(type="text/javascript", src="/js/view-product/ajax.js")
                 

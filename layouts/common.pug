@@ -2,8 +2,8 @@ html
     head
         block title
         meta(property="og:title" content="Misabee Shop")
-        meta(property="og:description" content="Demo Node.js server application")
-        meta(property="og:image" content="https://res.cloudinary.com/dumfvnj9f/image/upload/v1575527753/misa-bee/circle-cropped_qmnuyt.png")
+        meta(property="og:description" content="Misabee shop - Túi xách thời trang cao cấp Hà Nội")
+        meta(property="og:image" content="https://res.cloudinary.com/dumfvnj9f/image/upload/v1575999455/misa-bee/77235065_120784862714771_9021617631752355840_n_wohzmf.png")
         meta(property="og:url" content="")
         meta(property="og:type", content="website")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
@@ -22,7 +22,7 @@ html
         nav(class="navbar navbar-expand-lg navbar-light bg-light fixed-top")
             div(class="pl-0")
                 a(class="navbar-brand" href="/")
-                    img.logo(src="/images/logo-1.png" alt="logo.png" style="height: 50px")
+                    img.logo(style="width: 40px;" src="/images/logo-1.png" alt="logo.png")
                     span(class="name-page") Misabee
             div.cart-collapsed
                 span.dropdown
@@ -30,10 +30,10 @@ html
                         i(class="material-icons-outlined") search
                     div.search-collapsed-dropdown(class="dropdown-menu" aria-labelledby="searchDropdown")
                         div.search(class="input-group my-2 my-lg-0")
-                            input.search(type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon2")
-                            div(class="input-group-append")
-                                button.search(class="btn btn-outline-secondary" type="button")
-                                    i(class="material-icons-outlined") search
+                            form(action="/products/search" method="GET" class="form-inline mr-auto" style="margin: 0px; flex-direction: row-reverse;")
+                                input.search(name="name" type="text" class="form-control shadow-none" placeholder="Tìm kiếm..." aria-label="Search" aria-describedby="basic-addon2")
+                                span
+                                    button.search(class="btn" type="search")
                         
                 a(class="nav-link" href="/cart")
                     i(class="material-icons-outlined") shopping_cart
@@ -48,9 +48,9 @@ html
                     li.ele-dropdown(class="nav-item dropdown")
                         a.ele-dropdown(class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")="Sản phẩm "
                         div.ele-dropdown(class="dropdown-menu" aria-labelledby="navbarDropdown")
-                            a(class="dropdown-item" href="/products/louis-vuitton") Louis Vuitton
-                            a(class="dropdown-item" href="/products/hermes") Hermes
-                            a(class="dropdown-item" href="/products/gucci") Gucci
+                            a(class="dropdown-item" href="/products/search?name=Louis+Vuitton") Louis Vuitton
+                            a(class="dropdown-item" href="/products/search?name=Hermes") Hermes
+                            a(class="dropdown-item" href="/products/search?name=Gucci") Gucci
                     li.ele-dropdown(class="nav-item dropdown")
                         a.ele-dropdown(class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")="Hỗ trợ "
                         div.ele-dropdown(class="dropdown-menu" aria-labelledby="navbarDropdown")
@@ -60,11 +60,21 @@ html
                     li(class="nav-item")
                         a(class="nav-link" href="/contact") Liên hệ
                         span(class="sr-only")
+                    if (user)
+                        li.ele-dropdown(class="nav-item dropdown")
+                            a.ele-dropdown(class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")="Quản lý"
+                            div.ele-dropdown(class="dropdown-menu" aria-labelledby="navbarDropdown")
+                                a(class="dropdown-item" href="/users") Trang quản lý
+                                a(class="dropdown-item" href="/users/orders") Tất cả đơn hàng
+                                a(class="dropdown-item" href="/users/orders/unchecked") Đơn hàng chưa kiểm tra
+                                a(class="dropdown-item" href="/users/all") Tất cả quản trị viên
+                                a(class="dropdown-item" href="/auth/logout") Đăng xuất
                 div.search.need-hide(class="input-group my-2 my-lg-0")
-                    input.search(type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon2")
-                    div(class="input-group-append")
-                        button.input-group-append.search(class="btn btn-outline-secondary" type="button")
-                            i(class="material-icons-outlined") search
+                    form(action="/products/search" method="GET" class="form-inline mr-auto" style="margin: 0px; flex-direction: row-reverse;")
+                        input.search(name="name" type="text" class="form-control shadow-none" placeholder="Tìm kiếm..." aria-label="Search" aria-describedby="basic-addon2")
+                        span(class="input-group-append")
+                            button.search(class="btn btn-outline-secondary shadow-none" type="search")
+                                i(class="material-icons-outlined") search
                 div.cart
                     a(class="nav-link" href="/cart")
                         i(class="material-icons-outlined") shopping_cart
@@ -100,9 +110,9 @@ html
         footer.page-footer.font-small.container
             div.row
                 div.col-6
-                    div.left © 2019 Misabee Shop
+                    div.left © 2019 Misabee
                 div.col-6
-                    div.right Power by Misa
+                    div.right Powered by タイン。ヴ
         script(type="text/javascript", src="/js/custom.js")
         script(type="text/javascript", src="/js/ajax.js")
         block js

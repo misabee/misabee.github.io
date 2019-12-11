@@ -1,0 +1,26 @@
+extends ../../layouts/common.pug
+
+block title
+    title Quản lý
+
+block content
+    div(style="height: 30px")
+    div.container
+        div.row
+            div.col.col-lg-6.col-md-10.col-sm-12.col-12
+                h1(style="padding-bottom: 30px") Quản trị viên
+                
+        div.row
+            div.col.col-lg-6.col-md-10.col-sm-12.col-12
+                table.table
+                    thead
+                        tr
+                            th(scope="col" style="text-align: center;") STT
+                            th(scope="col") Tên
+                            th(scope="col") Tên đăng nhập
+                    tbody
+                        each user in users
+                            tr
+                                th(scope="col" style="text-align: center;")= ++count
+                                td(scope="col")= user.name
+                                td(scope="col")= user.username

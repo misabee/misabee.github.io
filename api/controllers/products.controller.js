@@ -54,6 +54,7 @@ module.exports.paginationProducts = function (req, res) {
         if (err)
             console.log(err);
         else {
+            result.reverse();
             var data = result.slice(start, end);
             data.push(pageEnd);
             res.json(data);

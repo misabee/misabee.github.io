@@ -1,0 +1,13 @@
+.cart-page {
+    padding: 20px!important;
+}
+
+.cart-page .title {
+    padding-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) {
+    .cart-page #submit-button {
+        margin-right: 40px;
+    }
+}

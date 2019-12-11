@@ -1,0 +1,17 @@
+extends ../../layouts/common.pug
+
+block title
+    title Giỏ hàng
+
+block css
+    link(rel='stylesheet', href='/styles/cart-style.css')
+
+block content
+    div.container.cart-page
+        div.row
+            div.col
+                h1.title Giỏ hàng
+                div(id='content-cart-page')
+
+block js
+    script(src="js/cart/ajax.js")

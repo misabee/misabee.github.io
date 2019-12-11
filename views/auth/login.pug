@@ -1,0 +1,23 @@
+extends ../../layouts/common.pug
+
+block title
+    title Đăng nhập
+
+block content
+    div.container.cart-submit-page(style="padding-top: 30px; padding-bottom: 30px;")
+        div.row
+            div.col
+                h1.title(style="padding-bottom: 20px;") Đăng nhập
+                if errors
+                    each error in errors
+                        .alert.alert-danger(style="text-align: center;")= error
+                div
+                    form(action="/auth/login", method="POST")
+                        div.form-group
+                            label(for="name") Tên đăng nhập
+                            input#name.form-control.shadow-none(type="text" placeholder="Tên đăng nhập" name="username" value=value ? value.username : "")
+                        div.form-group
+                            label(for="password") Mật khẩu
+                            input#password.form-control.shadow-none(type="password" placeholder="Mật khẩu" name="password")
+                        
+                        button.btn.btn-danger.shadow-none Đăng nhập
